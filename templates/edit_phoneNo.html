@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Phone Number</title>
+  </head>
+  <body>
+    <form action="{{ url_for('editNo') }}" method="POST">
+      <p>Person Name: {{person.name}}</p>
+      <p>Current phone number: {{person.phone_number}}</p>
+      <input hidden="hidden" name="id" value="{{person.id}}" />
+      <input name="phone_number" type="text" placeholder="New Phone Number" />
+      <button type="submit">Change Phone No</button>
+    </form>
+  </body>
+</html>

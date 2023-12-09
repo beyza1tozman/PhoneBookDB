@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Name</title>
+  </head>
+  <body>
+    <form action="{{ url_for('editName') }}" method="POST">
+      <p>Current name: {{person.name}}</p>
+      <input hidden="hidden" name="id" value="{{person.id}}" />
+      <input name="name" type="text" placeholder="New Name" />
+      <button type="submit">Change Name</button>
+    </form>
+  </body>
+</html>

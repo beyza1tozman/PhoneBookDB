@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add new Contact!</title>
+  </head>
+  <body>
+    <form action="{{ url_for('add') }}" method="POST">
+      <label>Person Name</label>
+      <input name="name" type="text" />
+      <label>Person Phone Number</label>
+      <input name="phone_number" type="text" />
+      <button type="submit">Add Person</button>
+    </form>
+  </body>
+</html>

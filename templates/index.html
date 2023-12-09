@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Phone Book</title>
+  </head>
+  <body>
+    <h1>My Phone Book</h1>
+    {% if persons == []: %}
+    <p>Phone Book is empty.</p>
+    {% endif %}
+    <ul>
+      {% for person in persons %}
+      <li>
+        <a href="{{ url_for('delete', id=person.id) }}">Delete</a>
+        {{ person.name }} - {{ person.phone_number }}
+        <a href="{{ url_for('editNo', id=person.id) }}">Edit Phone Number</a>
+        <a href="{{ url_for('editName', id=person.id) }}">Edit Name</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('add') }}">Add New Person</a>
+  </body>
+</html>
